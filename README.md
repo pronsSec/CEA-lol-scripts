@@ -36,3 +36,68 @@ mysql> SELECT is_account_enabled('localhost', 'root');
 * +-----------------------------------------+
 * | YES                                     |
 * +-----------------------------------------+
+
+---
+
+---
+
+---
+
+## enabled-events.sql
+
+mysql> call currently_enabled(TRUE, TRUE);
+ * +----------------------------+
+ * | performance_schema_enabled |
+ * +----------------------------+
+ * |                          1 |
+ * +----------------------------+
+ * 1 row in set (0.00 sec)
+ * 
+ * +---------------+
+ * | enabled_users |
+ * +---------------+
+ * | '%'@'%'       |
+ * +---------------+
+ * 1 row in set (0.01 sec)
+ * 
+ * +----------------------+---------+-------+
+ * | objects              | enabled | timed |
+ * +----------------------+---------+-------+
+ * | mysql.%              | NO      | NO    |
+ * | performance_schema.% | NO      | NO    |
+ * | information_schema.% | NO      | NO    |
+ * | %.%                  | YES     | YES   |
+ * +----------------------+---------+-------+
+ * 4 rows in set (0.01 sec)
+ * 
+ * +---------------------------+
+ * | enabled_consumers         |
+ * +---------------------------+
+ * | events_statements_current |
+ * | global_instrumentation    |
+ * | thread_instrumentation    |
+ * | statements_digest         |
+ * +---------------------------+
+ * 4 rows in set (0.05 sec)
+ * 
+ * +--------------------------+-------------+
+ * | enabled_threads          | thread_type |
+ * +--------------------------+-------------+
+ * | innodb/srv_master_thread | BACKGROUND  |
+ * | root@localhost           | FOREGROUND  |
+ * | root@localhost           | FOREGROUND  |
+ * | root@localhost           | FOREGROUND  |
+ * | root@localhost           | FOREGROUND  |
+ * +--------------------------+-------------+
+ * 5 rows in set (0.03 sec)
+ * 
+ * +-------------------------------------+-------+
+ * | enabled_instruments                 | timed |
+ * +-------------------------------------+-------+
+ * | wait/io/file/sql/map                | YES   |
+ * | wait/io/file/sql/binlog             | YES   |
+ * ...
+ * | statement/com/Error                 | YES   |
+ * | statement/com/                      | YES   |
+ * | idle                                | YES   |
+ * +-------------------------------------+-------+
