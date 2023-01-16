@@ -10,7 +10,7 @@ Homesteading is a lifestyle of self-sufficiency. It is characterized by subsiste
 
 ---
 
-## utf-converter.sh
+## mysql-utf_converter.sh
 
 
 Converts mysql/mariaDB databases from utf8 to utf8mb4, including all tables and fields.
@@ -31,7 +31,7 @@ See mysql documentation for more parameters.
 
 ---
 
-## check-account-enabled-mysql.sql
+## mysql-check_account_enabled.sql
 
 mysql> SELECT is_account_enabled('localhost', 'root');
 * +-----------------------------------------+
@@ -46,7 +46,7 @@ mysql> SELECT is_account_enabled('localhost', 'root');
 
 ---
 
-## enabled-events.sql
+## mysql-enabled_events.sql
 
 mysql> call currently_enabled(TRUE, TRUE);
  * +----------------------------+
