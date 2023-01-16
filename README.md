@@ -23,3 +23,16 @@ Example usage: convert.sh my_database --user=my_user --password=the_password
 See mysql documentation for more parameters.
 
 -------------------------------
+
+---
+
+---
+
+## check-account-enabled-mysql.sql
+
+mysql> SELECT is_account_enabled('localhost', 'root');
+ +-----------------------------------------+
+ | is_account_enabled('localhost', 'root') |
+ +-----------------------------------------+
+ | YES                                     |
+ +-----------------------------------------+
