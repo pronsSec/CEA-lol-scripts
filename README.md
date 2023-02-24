@@ -1,11 +1,11 @@
 # *dba-lol-scripts*
 
-All mysql rn
+All mysql and Sql-Server rn
 
 Homesteading is a lifestyle of self-sufficiency. It is characterized by subsistence agriculture, home preservation of food, and may also involve the small scale production of textiles, clothing, and craft work for household use or sale.
 
 ---
-
+# MySQL
 ---
 
 ---
@@ -119,3 +119,16 @@ mysql> call currently_enabled(TRUE, TRUE);
  * +------+------------------+---------------+-------------+---------------------+-------------------+
  * | root |             1967 | 00:03:35.99.  | 109.81 ms   |                   2 |                 7 |
  * +------+------------------+---------------+-------------+---------------------+-------------------+
+ 
+ 
+ ------
+ ------
+ # SQL Server
+ ------
+ ------
+ 
+ ## server-user-perms.sql
+ 
+ 
+  *Returns a list of database principals (users, et al) and any
+	permissions that have explicitly been granted or denied for all system and user databases.
