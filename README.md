@@ -143,3 +143,11 @@ mysql> call currently_enabled(TRUE, TRUE);
 	instance, if the login name does not exist or is already
 	mapped to another user in the database).
 */
+
+## server-adminbrainmelt-swapSA.sql
+
+/***************************************************************************************
+	This script renames the [sa] login and creates a new [sa] login to take its place.
+	The new [sa] login will have authorizations scaled down in multiple steps, 
+	which can be implemented all at once, or implemented over any period of time.
+***************************************************************************************/
