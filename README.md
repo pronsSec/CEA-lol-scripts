@@ -2,7 +2,14 @@
 
 All mysql and Sql-Server rn
 
-Homesteading is a lifestyle of self-sufficiency. It is characterized by subsistence agriculture, home preservation of food, and may also involve the small scale production of textiles, clothing, and craft work for household use or sale.
+
+
+
+Conan Doyle's Holmes had taught himself to observe on a regular, almost superhuman basis. For him, taking note of the myriad inputs from his surroundings was a matter of course. He was never not observing, never not in touch with his environment. He had mindfulness down to an art.
+
+
+
+
 
 ---
 # MySQL
