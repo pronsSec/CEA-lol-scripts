@@ -132,3 +132,14 @@ mysql> call currently_enabled(TRUE, TRUE);
  
   *Returns a list of database principals (users, et al) and any
 	permissions that have explicitly been granted or denied for all system and user databases.
+	
+## server-mapusers-2login.sql
+
+/*
+	This script iterates through all system and user databases.
+	If any "orphaned" database users are found, it will attempt
+	to remap the user to a SQL Authentication login with the
+	same name. TRY/CATCH is used to discard any errors (for 
+	instance, if the login name does not exist or is already
+	mapped to another user in the database).
+*/
